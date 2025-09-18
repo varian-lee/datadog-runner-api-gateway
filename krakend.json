@@ -47,7 +47,7 @@
                 "value": "router"
               },
               {
-                "key": "service_type", 
+                "key": "service_type",
                 "value": "api_gateway"
               }
             ]
@@ -110,15 +110,24 @@
       }
     },
     "security/cors": {
-      "allow_origins": ["*"],
-      "allow_methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      "allow_origins": [
+        "*"
+      ],
+      "allow_methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "PATCH",
+        "OPTIONS"
+      ],
       "allow_headers": [
         "*",
-        "Content-Type", 
+        "Content-Type",
         "Authorization",
         "X-Requested-With",
         "x-datadog-trace-id",
-        "x-datadog-parent-id", 
+        "x-datadog-parent-id",
         "x-datadog-origin",
         "x-datadog-sampling-priority",
         "traceparent",
@@ -126,7 +135,7 @@
         "b3"
       ],
       "expose_headers": [
-        "Content-Length", 
+        "Content-Length",
         "Content-Type",
         "x-datadog-trace-id",
         "x-datadog-parent-id",
@@ -148,7 +157,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["auth-python-svc:8000"],
+          "host": [
+            "auth-python-svc:8000"
+          ],
           "disable_host_sanitize": false
         }
       ],
@@ -170,26 +181,42 @@
       "method": "GET",
       "output_encoding": "no-op",
       "input_headers": [
-        "Cookie", "Authorization",
-        "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-        "traceparent", "tracestate", "b3"
+        "Cookie",
+        "Authorization",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "x-datadog-origin",
+        "x-datadog-sampling-priority",
+        "traceparent",
+        "tracestate",
+        "b3"
       ],
       "output_headers": [
         "Set-Cookie",
-        "x-datadog-trace-id", "x-datadog-parent-id",
-        "traceparent", "tracestate"
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
       ],
       "extra_config": {
         "github_com/devopsfaith/krakend/proxy": {
           "request_headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ],
           "response_headers_to_pass": [
             "Set-Cookie",
-            "x-datadog-trace-id", "x-datadog-parent-id",
-            "traceparent", "tracestate"
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
           ]
         }
       },
@@ -199,12 +226,20 @@
           "encoding": "no-op",
           "sd": "static",
           "method": "GET",
-          "host": ["auth-python-svc:8000"],
+          "host": [
+            "auth-python-svc:8000"
+          ],
           "disable_host_sanitize": false,
           "headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ]
         }
       ]
@@ -214,26 +249,42 @@
       "method": "POST",
       "output_encoding": "no-op",
       "input_headers": [
-        "Cookie", "Authorization",
-        "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-        "traceparent", "tracestate", "b3"
+        "Cookie",
+        "Authorization",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "x-datadog-origin",
+        "x-datadog-sampling-priority",
+        "traceparent",
+        "tracestate",
+        "b3"
       ],
       "output_headers": [
         "Set-Cookie",
-        "x-datadog-trace-id", "x-datadog-parent-id",
-        "traceparent", "tracestate"
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
       ],
       "extra_config": {
         "github_com/devopsfaith/krakend/proxy": {
           "request_headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ],
           "response_headers_to_pass": [
             "Set-Cookie",
-            "x-datadog-trace-id", "x-datadog-parent-id",
-            "traceparent", "tracestate"
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
           ]
         }
       },
@@ -243,12 +294,20 @@
           "encoding": "no-op",
           "sd": "static",
           "method": "POST",
-          "host": ["auth-python-svc:8000"],
+          "host": [
+            "auth-python-svc:8000"
+          ],
           "disable_host_sanitize": false,
           "headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ]
         }
       ]
@@ -258,26 +317,42 @@
       "method": "DELETE",
       "output_encoding": "no-op",
       "input_headers": [
-        "Cookie", "Authorization",
-        "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-        "traceparent", "tracestate", "b3"
+        "Cookie",
+        "Authorization",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "x-datadog-origin",
+        "x-datadog-sampling-priority",
+        "traceparent",
+        "tracestate",
+        "b3"
       ],
       "output_headers": [
         "Set-Cookie",
-        "x-datadog-trace-id", "x-datadog-parent-id",
-        "traceparent", "tracestate"
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
       ],
       "extra_config": {
         "github_com/devopsfaith/krakend/proxy": {
           "request_headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ],
           "response_headers_to_pass": [
             "Set-Cookie",
-            "x-datadog-trace-id", "x-datadog-parent-id",
-            "traceparent", "tracestate"
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
           ]
         }
       },
@@ -287,12 +362,20 @@
           "encoding": "no-op",
           "sd": "static",
           "method": "DELETE",
-          "host": ["auth-python-svc:8000"],
+          "host": [
+            "auth-python-svc:8000"
+          ],
           "disable_host_sanitize": false,
           "headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ]
         }
       ]
@@ -302,26 +385,42 @@
       "method": "GET",
       "output_encoding": "no-op",
       "input_headers": [
-        "Cookie", "Authorization",
-        "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-        "traceparent", "tracestate", "b3"
+        "Cookie",
+        "Authorization",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "x-datadog-origin",
+        "x-datadog-sampling-priority",
+        "traceparent",
+        "tracestate",
+        "b3"
       ],
       "output_headers": [
         "Set-Cookie",
-        "x-datadog-trace-id", "x-datadog-parent-id",
-        "traceparent", "tracestate"
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
       ],
       "extra_config": {
         "github_com/devopsfaith/krakend/proxy": {
           "request_headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ],
           "response_headers_to_pass": [
             "Set-Cookie",
-            "x-datadog-trace-id", "x-datadog-parent-id",
-            "traceparent", "tracestate"
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
           ]
         }
       },
@@ -331,12 +430,20 @@
           "encoding": "no-op",
           "sd": "static",
           "method": "GET",
-          "host": ["auth-python-svc:8000"],
+          "host": [
+            "auth-python-svc:8000"
+          ],
           "disable_host_sanitize": false,
           "headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ]
         }
       ]
@@ -346,26 +453,42 @@
       "method": "POST",
       "output_encoding": "no-op",
       "input_headers": [
-        "Cookie", "Authorization",
-        "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-        "traceparent", "tracestate", "b3"
+        "Cookie",
+        "Authorization",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "x-datadog-origin",
+        "x-datadog-sampling-priority",
+        "traceparent",
+        "tracestate",
+        "b3"
       ],
       "output_headers": [
         "Set-Cookie",
-        "x-datadog-trace-id", "x-datadog-parent-id",
-        "traceparent", "tracestate"
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
       ],
       "extra_config": {
         "github_com/devopsfaith/krakend/proxy": {
           "request_headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ],
           "response_headers_to_pass": [
             "Set-Cookie",
-            "x-datadog-trace-id", "x-datadog-parent-id",
-            "traceparent", "tracestate"
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
           ]
         }
       },
@@ -375,12 +498,20 @@
           "encoding": "no-op",
           "sd": "static",
           "method": "POST",
-          "host": ["auth-python-svc:8000"],
+          "host": [
+            "auth-python-svc:8000"
+          ],
           "disable_host_sanitize": false,
           "headers_to_pass": [
-            "Cookie", "Authorization",
-            "x-datadog-trace-id", "x-datadog-parent-id", "x-datadog-origin", "x-datadog-sampling-priority",
-            "traceparent", "tracestate", "b3"
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
           ]
         }
       ]
@@ -395,7 +526,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["chat-node-svc:8080"],
+          "host": [
+            "chat-node-svc:8080"
+          ],
           "disable_host_sanitize": false
         }
       ]
@@ -410,7 +543,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["chat-node-svc:8080"],
+          "host": [
+            "chat-node-svc:8080"
+          ],
           "disable_host_sanitize": false
         }
       ]
@@ -425,7 +560,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "POST",
-          "host": ["chat-node-svc:8080"],
+          "host": [
+            "chat-node-svc:8080"
+          ],
           "disable_host_sanitize": false
         }
       ]
@@ -440,7 +577,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["ranking-java-svc:8081"],
+          "host": [
+            "ranking-java-svc:8081"
+          ],
           "disable_host_sanitize": false
         }
       ]
@@ -455,7 +594,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["ranking-java-svc:8081"],
+          "host": [
+            "ranking-java-svc:8081"
+          ],
           "disable_host_sanitize": false
         }
       ]
@@ -470,7 +611,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "POST",
-          "host": ["ranking-java-svc:8081"],
+          "host": [
+            "ranking-java-svc:8081"
+          ],
           "disable_host_sanitize": false
         }
       ]
@@ -479,18 +622,69 @@
       "endpoint": "/rankings/{path}",
       "method": "GET",
       "output_encoding": "no-op",
-      "input_query_strings": ["limit"],
+      "input_query_strings": [
+        "limit"
+      ],
+      "input_headers": [
+        "Cookie",
+        "Authorization",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "x-datadog-origin",
+        "x-datadog-sampling-priority",
+        "traceparent",
+        "tracestate",
+        "b3"
+      ],
+      "output_headers": [
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
+      ],
       "backend": [
         {
           "url_pattern": "/rankings/{path}",
           "encoding": "no-op",
           "sd": "static",
           "method": "GET",
-          "host": ["ranking-java-svc:8081"],
-          "disable_host_sanitize": false
+          "host": [
+            "ranking-java-svc:8081"
+          ],
+          "disable_host_sanitize": false,
+          "headers_to_pass": [
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
+          ]
         }
       ],
       "extra_config": {
+        "github_com/devopsfaith/krakend/proxy": {
+          "request_headers_to_pass": [
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "x-datadog-origin",
+            "x-datadog-sampling-priority",
+            "traceparent",
+            "tracestate",
+            "b3"
+          ],
+          "response_headers_to_pass": [
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
+          ]
+        },
         "qos/http-cache": {
           "disabled": true
         },
@@ -513,7 +707,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["auth-python-svc:8000"],
+          "host": [
+            "auth-python-svc:8000"
+          ],
           "disable_host_sanitize": false,
           "group": "auth"
         },
@@ -522,7 +718,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["chat-node-svc:8080"],
+          "host": [
+            "chat-node-svc:8080"
+          ],
           "disable_host_sanitize": false,
           "group": "chat"
         },
@@ -531,7 +729,9 @@
           "encoding": "json",
           "sd": "static",
           "method": "GET",
-          "host": ["ranking-java-svc:8081"],
+          "host": [
+            "ranking-java-svc:8081"
+          ],
           "disable_host_sanitize": false,
           "group": "ranking"
         }
