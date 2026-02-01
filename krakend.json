@@ -1,5 +1,6 @@
 {
   "_comment": "🚪 KrakenD API Gateway 설정 - Datadog Runner 프로젝트",
+  "_updated": "2026-02-01T17:00:00Z",
   "_description": "마이크로서비스 통합 API Gateway - 모든 백엔드 서비스 라우팅, OpenTelemetry 메트릭, 분산 트레이싱 지원",
   "_features": [
     "✅ 통합 API 엔드포인트 (/api/auth, /api/chat, /api/ranking, /rankings)",
