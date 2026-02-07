@@ -518,6 +518,84 @@
       ]
     },
     {
+      "endpoint": "/api/customization",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "Cookie",
+        "Authorization",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
+      ],
+      "output_headers": [
+        "Set-Cookie",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id"
+      ],
+      "backend": [
+        {
+          "url_pattern": "/customization",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "host": [
+            "auth-python-svc:8000"
+          ],
+          "disable_host_sanitize": false,
+          "headers_to_pass": [
+            "Cookie",
+            "Authorization",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/customization",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "Cookie",
+        "Authorization",
+        "Content-Type",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id",
+        "traceparent",
+        "tracestate"
+      ],
+      "output_headers": [
+        "Set-Cookie",
+        "x-datadog-trace-id",
+        "x-datadog-parent-id"
+      ],
+      "backend": [
+        {
+          "url_pattern": "/customization",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "POST",
+          "host": [
+            "auth-python-svc:8000"
+          ],
+          "disable_host_sanitize": false,
+          "headers_to_pass": [
+            "Cookie",
+            "Authorization",
+            "Content-Type",
+            "x-datadog-trace-id",
+            "x-datadog-parent-id",
+            "traceparent",
+            "tracestate"
+          ]
+        }
+      ]
+    },
+    {
       "endpoint": "/api/chat",
       "method": "GET",
       "output_encoding": "json",
@@ -624,7 +702,8 @@
       "method": "GET",
       "output_encoding": "no-op",
       "input_query_strings": [
-        "limit"
+        "limit",
+        "userIds"
       ],
       "input_headers": [
         "Cookie",
